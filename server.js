@@ -53,6 +53,12 @@ app.get('/about', (req, res) => {
     title: 'Manu'
   });
 });
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs',{
+    year: '2017',
+    title: 'My Projects'
+  });
+});
 
 app.get('/bad', (req, res) => {
   res.send({
@@ -61,5 +67,5 @@ app.get('/bad', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`server is up at port: ${port}`);
+  console.log(`server is up at Heroku port: ${port}`);
 });
